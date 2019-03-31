@@ -1,0 +1,25 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main() {
+    float a=-0.6, b=5.3, z, t;
+    cout << "Vvedite n i m" << endl;
+    cin >> z >> t;
+    if (z<b) {
+        t=pow(z+a*a*b,1/3);
+    }
+    if(z==b) {
+        t=1-log(z+cos(a*a*b));
+    }
+    if (z>b) {
+        t=1/cos(z*a);
+    }
+    if (a>=b) {
+        z=1-2*cos(a)*sin(b);
+    }
+    if (a<b){
+        z=sqrt(abs(a*a-b*b));
+    }
+    cout << a <<endl <<  b << endl << z << endl << t;
+    return 0;
+}

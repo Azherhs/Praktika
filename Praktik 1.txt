@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a,b,e;
+    float d, c;
+    cout << "Kakie chisla (1) int (2) float" << endl;
+    cin >> e;
+    if (e==1) {
+        cin >> a >> b;
+        cout<< "Summa" << a+b;
+        cout<< "Raznost" << a-b;
+    }
+    if (e==0) {
+        cin >> d >> c;
+        cout<< "Summa" << d+c << endl;
+        cout<< "Raznost" << d-c<< endl;
+    }
+
+    return 0;
+}

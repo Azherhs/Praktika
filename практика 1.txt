@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main() {
+    string b;
+    cout << "What is your name" << endl;
+    cin >> b;
+    cout << "Hello " << b<<endl;
+    return 0;
+}

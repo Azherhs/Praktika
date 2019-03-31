@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main(){
+    struct car{
+        string mark;
+        string model;
+        int dvigatel;
+        int probeg;
+        car() {
+            cout << "Марка модели ";
+            cin >> mark;
+            cout << "Введите имя модели: ";
+            cin>>model;
+            cout << "Лошадиные силы ";
+            cin >>dvigatel;
+            cout << "Пробег ";
+            cin >> probeg;
+        }
+    };
+    return 0;
+}

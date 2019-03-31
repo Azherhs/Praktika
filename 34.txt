@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main(){
+    struct vektor{;
+        string nazvanie;
+        int point1;
+        int point2;
+        vektor() {
+            cout << "название вектора ";
+            cin >> nazvanie;
+            cout << "1 точка: ";
+            cin>>point1;
+            cout << "2 точка: ";
+            cin >>point2;
+        }
+    };
+    return 0;
+}

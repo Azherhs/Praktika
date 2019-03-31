@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main(){
+    struct books{
+        string author;
+        string name;
+        int pages;
+        int year;
+        books() {
+                cout << "Год: ";
+                cin >> year;
+                cout << "Кол-во страниц: ";
+                cin >> pages;
+                cout << "Введите имя автора: ";
+                cin>>author;
+                cout << "Введите название книги: ";
+                cin >> name;
+        }
+    };
+    return 0;
+}

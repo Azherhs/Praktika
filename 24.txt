@@ -1,0 +1,25 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main() {
+    float a=3.5, x= -0.7, y, t;
+    cout << "Vvedite n i m" << endl;
+    cin >> y >> t;
+    if (a>y) {
+        t=y/(a-x);
+    }
+    if(a==y) {
+        t=(y/(a-x)+cos(2*a*y));
+    }
+    if (a<y) {
+        t=tan(a*x)+cos(2*a*y);
+    }
+    if (a<=x) {
+        y=a+log(x+a);
+    }
+    if (a>x){
+        y=sqrt(sin(a*x));
+    }
+    cout << a <<endl <<  x << endl << y << endl << t;
+    return 0;
+}

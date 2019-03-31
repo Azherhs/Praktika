@@ -1,0 +1,25 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main() {
+    float a=4.8, b=-7.9, n, m;
+    cout << "Vvedite n i m" << endl;
+    cin >> n >> m;
+    if (n<b) {
+        m=(n+a)/-b+sqrt(sin(a)*sin(a)-cos(n));
+    }
+    if(n==b) {
+        m=b*b+tan(n*a);
+    }
+    if (n>b) {
+        m=b*b*b+n*a*a;
+    }
+    if (a>=b) {
+        n=pow(a-b, 1/3);
+    }
+    else{
+        n=a*a + (a-b)/sin(a*b);
+    }
+    cout << a <<endl <<  b << endl << n << endl << m;
+    return 0;
+}
