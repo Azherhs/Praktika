@@ -3,7 +3,7 @@
 using namespace std;
 int main() {
     float a=4.6, b=1.5, y, t;
-    cout << "Vvedite n i m" << endl;
+    cout << "Vvedite y i t" << endl;
     cin >> y >> t;
     if (y<b) {
         t=sin(y)*sin(y)+1/tan(a-b);

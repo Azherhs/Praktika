@@ -3,7 +3,7 @@
 using namespace std;
 int main() {
     float a=-0.6, b=5.3, z, t;
-    cout << "Vvedite n i m" << endl;
+    cout << "Vvedite z i t" << endl;
     cin >> z >> t;
     if (z<b) {
         t=pow(z+a*a*b,1/3);
