@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+double *Pamat(int kol) {
+    double *num= new double[kol];
+    return num;
+}
+double* Zapis(double* num,int kol) {
+    for (int i = 0; i < kol; i++) {
+        num[i] = i+1;
+    }
+    return num;
+}
+void vivod(double* num, int kol){
+    for(int i=0; i<kol; i++) {
+        cout << num[i]<< " ";
+    }
+}
+double* Ochistka(double* num) {
+    delete[]num;
+    return num;
+}
+int main()
+{
+    int size=0, k=1;
+    while (k==1) {
+        cout << "Vvedite razmer" << endl; //размер
+        cin >> size;
+        double *mass;
+        cout << "Rozhaem massiv" << endl;
+        mass = Pamat(size); //выделяем память
+        cout << "Vvedite chisla" << endl;
+        mass = Zapis(mass, size); // Записываем
+        vivod(mass, size); //вывод
+        cout << "Ubistvo massiva" << endl;
+        mass = Ochistka(mass);
+        cout << "Hoyite novy massiv (1) da (0) net" << endl;
+        cin >> k;
+    }
+}

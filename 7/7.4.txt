@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+class Screen {
+protected:
+    int height;
+    int width;
+};
+class Keyboard {
+protected:
+    int kolvo_klavish;
+};
+class Notebook : public Screen, public Keyboard {
+public:
+    string name;
+    Notebook(string n) {
+        name = n;
+        height = 350;
+        width = 500;
+        kolvo_klavish = 62;
+    }
+};
+class Phone : public Screen, public Keyboard {
+public:
+    string name;
+    Phone(string n) {
+        name = n;
+        height = 11;
+        width = 9;
+        kolvo_klavish = 1;
+    }
+};
+class Computer : public Screen, public Keyboard {
+public:
+    string name;
+    Computer(string n) {
+        name=n;
+        height = 125;
+        width = 425;
+        kolvo_klavish=65;
+    }
+};

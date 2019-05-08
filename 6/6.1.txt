@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+class Property {
+protected:
+    double worth;
+public:
+    Property(){}
+    virtual double result()=0;
+};
+class Appartment: public Property {
+public:
+    Appartment(double a) {worth=a;}
+    double result(){
+        return worth/1000;
+    }
+};
+class Car: public Property {
+public:
+    Car(double a) {worth = a;}
+    double result(){
+        return worth/200;
+    }
+};
+class CountryHouse: public Property {
+public:
+    CountryHouse(double a) {worth=a;}
+    double result (){
+        return worth/500;
+    }
+};
+int main() {
+    Property **mass = new Property*[7];
+    mass[0] = new Appartment(1500000);
+    mass[1] = new Appartment(10000000);
+    mass[2] = new Appartment(8540389);
+    mass[3] = new Car(2000000);
+    mass[4] = new Car(4500000);
+    mass[5] = new CountryHouse(12000000);
+    mass[6] = new CountryHouse(4500000);
+    for (int i=0;i<7;i++) {
+        cout <<"Nalog: "<<mass[i]->result()<<endl;
+    }
+    delete[]mass;
+    return 0;
+}

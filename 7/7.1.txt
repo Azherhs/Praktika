@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+class animal {
+protected:
+    string vid;
+    double ves;
+    double dlina_tela;
+};
+class cat :public animal {
+public:
+    string opeka = "Chelovek";
+    cat(string x,double y,double z) {
+        x = vid;
+        y = ves;
+        z = dlina_tela;}
+};
+class dog :public animal {
+public:
+    string opeka = "Chelovek";
+    dog(string x,double y,double z) {
+        x = vid;
+        y = ves;
+        z = dlina_tela;}
+};
+class popygai :public animal {
+public:
+    string opeka = "Zoopark";
+    popygai(string x,double y,double z) {
+        x = vid;
+        y = ves;
+        z = dlina_tela;}
+};

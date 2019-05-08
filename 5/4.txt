@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+int umnozit(int x,int y){
+    return x*y;
+}
+double umnozit(double x,double y) {
+    return x * y;
+}
+int delit(int x,int y){
+    return x/y;
+}
+double delit(double x,double y){
+    return x/y;
+}
+int slozit(int x,int y){
+    return x+y;
+}
+double slozit(double x,double y){
+    return x+y;
+}
+int vichest(int x,int y){
+    return x-y;
+}
+double vichest(double x,double y){
+    return x-y;
+}
+int main()
+{
+    int x,y;
+    double x1,y1;
+    cout<<"Vvedite 2 selix chisla: ";
+    cin>>x>>y;
+    cout<<"Vvedite 2 drobnix chisla: ";
+    cin>>x1>>y1;
+    cout<<"Slozenie: "<<slozit(x,y)<<'\t'<<slozit(x1,y1)<<endl;
+    cout<<"Vicitanie: "<<vichest(x,y)<<'\t'<<vichest(x1,y1)<<endl;
+    cout<<"Umnozenie: "<<umnozit(x,y)<<'\t'<<umnozit(x1,y1)<<endl;
+    cout<<"Delenie: "<<delit(x,y)<<'\t' <<delit(x1,y1)<<endl;
+}

@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+void sort_my_mass(int* mass, int size) {
+    int k,k1;
+    for (int i=1;i<size;i++)
+    {
+        k = mass[i];
+        k1 = i-1;
+        while(k1 >= 0 && mass[k1] > k)
+        {
+            mass[k1 + 1] = mass[k1];
+            mass[k1] = k;
+            k1--;
+        }
+    }
+}
+void sort_my_mass(double* mass, int size) {
+    int k,k1;
+    for (int i=1;i<size;i++)
+    {
+        k = mass[i];
+        k1 = i-1;
+        while(k1 >= 0 && mass[k1] > k)
+        {
+            mass[k1 + 1] = mass[k1];
+            mass[k1] = k;
+            k1--;
+        }
+    }
+}
+void return_my_mass(int* Intmass,double* Dobmass,int size){
+    for (int i=0;i<size;i++) {
+        cout <<"Int mass: "<<Intmass[i]<< "\tDouble mass: " <<Dobmass[i]<< endl;
+    }
+}
+int main()
+{
+    int Intmass[2] = {1,2};
+    double Dobmass[2] = {1.6,1.1};
+    sort_my_mass(Intmass,2);
+    sort_my_mass(Dobmass,2);
+    return_my_mass(Intmass,Dobmass,2);
+    return 0;
+}

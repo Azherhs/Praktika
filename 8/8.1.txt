@@ -1,0 +1,23 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+int main(){
+    ofstream file1;
+    ifstream file2;
+    file2.open("kek.txt");
+    if (file2.is_open()) {
+        string s="keks";
+        while (!file2.eof()) {
+            file2 >> s;
+            cout << s << endl;
+        }
+        file2.close();
+    }
+    else {
+        cout << "Sozdaem novy fail" << endl;
+        file1.open("kek.txt");
+        file1.close();
+    }
+    return 0;
+}

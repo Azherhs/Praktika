@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+class Transport {
+    protected:
+        int kolvo_koles;
+        int max_ludei;
+        int max_speed;
+};
+class Car : public Transport {
+    public:
+        Car() {
+            kolvo_koles = 4;
+            max_ludei = 6;
+            max_speed = 420;
+        }
+};
+class Bus: public Transport {
+    public:
+        Bus() {
+            kolvo_koles = 10;
+            max_ludei = 73;
+            max_speed = 60;
+        }
+};
+
+class Bicycle : public Transport {
+    public:
+        Bicycle()  {
+            kolvo_koles = 2;
+            max_ludei = 1;
+            max_speed = 30;
+        }
+};

@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+class Figure {
+protected:
+    int kol_ugli;
+};
+class Chetir:public Figure{
+public:
+    Chetir() {kol_ugli=4; }
+};
+class romb :public Chetir{
+public:
+    double storona1;
+    romb(double a) {
+        storona1 = a;
+    }
+};
+class pryamougolnik : public Chetir {
+public:
+    double storona1;
+    double storona2;
+    pryamougolnik(double a, double b){
+        storona1 = a;
+        storona2 =b;
+    }
+};

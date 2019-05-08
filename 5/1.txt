@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+void sort(int* mass, int size){
+    for(int i=0;i<size;i++) {
+        for(int j=i+1; j<size; j++) {
+            if(mass[i]<mass[j]) swap(mass[i],mass[j]);
+        }
+    }
+}
+void sort(double* mass, int size) {
+    for (int i = 0; i < size; i++) {
+        for (int j = i + 1; j < size; j++) {
+            if (mass[i] < mass[j]) swap(mass[i], mass[j]);
+        }
+    }
+}
+void vivod(int* intmass, double* dobmass, int size) {
+        for(int i=0; i< size; i++) {
+            cout << "int massiv " << intmass[i];
+            cout <<"'/t'double massiv" << dobmass[i] << endl;
+        }
+        }
+int main() {
+    int  intmass[3]={1,2,3};
+    double dobmass[3]={1.2,3.3,4.1};
+    sort(intmass,3);
+    sort(dobmass, 3);
+    vivod(intmass, dobmass, 3);
+    return 0;
+}
